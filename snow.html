@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<meta name="author" content="Chloe Chantelle">
+<title>Snow</title>
+<link rel="shortcut icon" href="img/snow.png" type="image/ico">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+
+<body>  
+
+<div id="context">
+          
+        <div id="snow"></div>
+        
+          <div class="hide" id="menu">
+    <ul>
+    
+<li><a target="_blank" href="https://twitter.com">Tweet</a></li>
+<li><a target="_blank" href="https://www.youtube.com/feed/subscriptions">YouTube</a></li>
+<li><a target="_blank" href="http://inbox.google.com">Inbox</a></li>
+<li><a target="_blank" href="https://soundcloud.com">Soundcloud</a></li>
+<li><a target="_blank" href="https://www.dropbox.com">Dropbox</a></li>
+
+    </ul>
+         </div> <!-- end context menu -->
+          
+</div>  <!-- end context -->
+
+<script>
+if (document.getElementById('context').addEventListener) {
+    document.getElementById('context').addEventListener('contextmenu', function(e) {
+            $("#menu").toggleClass("hide");
+            $("#menu").css(
+              {
+                position: "absolute",
+                top: e.pageY,
+                left: e.pageX
+              }
+            );
+            e.preventDefault();
+     }, false);
+}
+
+$(document).bind("click", function(event) {
+  document.getElementById("menu").className = "hide";
+});
+</script>
+
+</body>
+</html>
