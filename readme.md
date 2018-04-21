@@ -26,6 +26,14 @@ Install the <a target="_blank" href="https://chrome.google.com/webstore/detail/n
 
 # Customizing
 
+<h3>Snow Fall</h3>
+
+You can customize the speed of how fast the snow falls
+
+`--speed: 20s;`
+
+5 being very fast snowstorm, 20 being slow snowfall
+
 <h3>Colors/Fonts</h3>
 
 Colors and fonts are set in the `:root` variables at the top of the `style.css` file.
