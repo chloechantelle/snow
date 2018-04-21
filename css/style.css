@@ -1,0 +1,107 @@
+                                         
+
+                                            /*     v a r i a b l e s     */
+
+:root {
+--bg: #000;                /*stick to darker colors*/
+
+--menubg: #fff;             /*whatever color your heart desires */
+
+--menutext: #111;        /* you probably want a different color than above */
+
+
+--speed: 20s;          /* 5 being very fast snowstorm, 20 being slow snowfall */
+
+--font: "Open Sans", Verdana, sans-serif;       /* font for the context menu */
+}
+
+
+
+                                                    /*     s n o w     */
+
+html, body {
+    background-color: var(--bg);
+    overflow: hidden;
+}                                                    
+
+#snow {
+  background: none;
+  font-family: Androgyne;
+  background-image: url('../img/s1.png'), url('../img/s2.png'), url('../img/s3.png');
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index:1;
+  -webkit-animation: snow var(--speed) linear infinite;
+  -moz-animation: snow var(--speed) linear infinite;
+  -ms-animation: snow var(--speed) linear infinite;
+  animation: snow var(--speed) linear infinite;
+}
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-moz-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-ms-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+
+
+                                                    /* c o n t e x t  m e n u */
+
+.hide {
+    display: none;
+}
+
+#context {
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg);
+  position: absolute;
+  padding: 0;
+  margin: 0;  
+}
+
+#menu li a {
+  color: var(--menutext);
+  text-decoration: none;
+  display: block;
+  padding: 15px; 
+  text-align: center;  
+  font-family: var(--font);
+}
+
+#menu li a:hover {
+  color: #aaa;  
+}
+
+#menu {
+  background-color: var(--menubg);
+  z-index: 9999;  
+}
+
+#menu ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+#menu li{
+    list-style: none;     
+}
+#menu li:hover {
+  background: var(--bg);
+}          
